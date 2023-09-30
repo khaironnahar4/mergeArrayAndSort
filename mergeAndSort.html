@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merge with While loop</title>
+    <script>
+        let array1=[2,5,11,19,24,27];
+        console.log(`First array is ${array1}`);
+        let array2=[12,16,18,39,43];
+        console.log(`Second array is ${array2}`);
+        let array3=[];
+        let a1=0;
+        let a2=0;
+        let a3=0;
+        while(a1<array1.length && a2<array2.length){
+            if(array1[a1]<array2[a2]){
+                array3[a3]=array1[a1];
+                a1++;
+            }else{
+                array3[a3]=array2[a2];
+                a2++;
+            }
+            a3++;
+        }
+        while(a1!=array1.length){
+            array3[a3]=array1[a1];
+            a1++;
+            a3++;
+        }
+        while(a2!=array2.length){
+            array3[a3]=array2[a2];
+            a2++;
+            a3++;
+        }
+        console.warn(`The new array is ${array3}`);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
